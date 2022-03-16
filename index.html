@@ -5,76 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página web</title>
+    <title>Audio Yack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <a href="#" class="logo">
-            <span>AUDIO</span>yack
+            <span>AUDIO </span>yack
         </a>
-        <input type="checkbox" id="menu-bar">
-        <label for="menu-bar" class="fa fa-bars"></label>
-        <nav class="navbar">
-            <a href="#inicio">Inicio</a>
-            <a href="#detalles">Detalles</a>
-            <a href="#acerca_de">Acerca de</a>
-            <a href="#opiniones">Opiniones</a>
-            <a href="#precios">Precios</a>
-            <a href="#contactos">Contactos</a>
-        </nav>
+        <div id="toggle-menu" class="toggle-menu">
+            <img id="img_menu" class="img_menu" src="./img/lista.png" alt="">
+        </div>
+        <div class="content_menu" id="content_menu">
+            <nav class="navbar">
+                <a href="#inicio">Home</a>
+                <a href="#detalles">Details</a>
+                <a href="#acerca_de">About</a>
+                <a href="#opiniones">Opinions</a>
+                <a href="#precios">Prices</a>
+                <a href="#contactos">Contact</a>
+            </nav>
+        </div>
     </header>
     <section class="inicio" id="inicio">
         <div class="content">
-            <h3>MONSTER ABC <span>auriculares</span></h3>
+            <h3>MONSTER ABC <span>head phones</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus minima enim sit reprehenderit labore
                 alias sequi deserunt voluptatum! Excepturi necessitatibus sequi perspiciatis tenetur a quam blanditiis
                 quas eius molestiae impedit? lore</p>
-            <a href="#" class="btn">Más detalles</a>
+            <a href="#detalles" class="btn">More details</a>
         </div>
         <div class="image">
             <img src="img/audifono.png" alt="">
         </div>
     </section>
     <section class="detalles" id="detalles">
-        <h1 class="heading">FUNCIONES</h1>
+        <h1 class="heading">DETAILS</h1>
         <div class="caja-contenedor">
             <div class="caja">
                 <img src="/img/icono1.png" alt="">
-                <h3>Clasico, pero moderno</h3>
+                <h3>Classic, but modern</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione quam ducimus, atque omnis
                     exercitationem laboriosam porro nesciunt veniam ullam similique explicabo quibusdam mollitia dolorum
                     quidem at maiores animi harum.</p>
-                <a href="#" class="btn">VER MÁS</a>
+                <a href="#" class="btn">SEE MORE</a>
             </div>
             <div class="caja">
                 <img src="/img/icono2.png" alt="">
-                <h3>Duración de la bateria para el día</h3>
+                <h3>Battery life for the day</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione quam ducimus, atque omnis
                     exercitationem laboriosam porro nesciunt veniam ullam similique explicabo quibusdam mollitia dolorum
                     quidem at maiores animi harum.</p>
-                <a href="#" class="btn">VER MÁS</a>
+                <a href="#" class="btn">SEE MORE</a>
             </div>
             <div class="caja">
                 <img src="/img/icono3.png" alt="">
-                <h3>Audio más inteligente</h3>
+                <h3>Smarter audio</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ratione quam ducimus, atque omnis
                     exercitationem laboriosam porro nesciunt veniam ullam similique explicabo quibusdam mollitia dolorum
                     quidem at maiores animi harum.</p>
-                <a href="#" class="btn">VER MÁS</a>
+                <a href="#" class="btn">SEE MORE</a>
             </div>
         </div>
     </section>
     <section class="acerca_de" id="acerca_de">
-        <h1 class="heading">Sensor de ruido</h1>
+        <h1 class="heading">Noise Sensor</h1>
         <div class="columna">
             <div class="image">
                 <img src="/img/auriculares_2.png" alt="">
             </div>
             <div class="content">
-                <h3>Calidad de sonido excepcional</h3>
+                <h3>Exceptional sound quality</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad molestias veritatis eveniet voluptates
                     iste dolor error, perferendis quam illum consequatur pariatur minus omnis laudantium unde neque
                     facilis ratione? Sed, iusto.</p>
@@ -91,21 +95,21 @@
         </div>
     </section>
     <div class="suscribete">
-        <h3>SUSCRIBETE PARA TENER MÁS NOVEDADES</h3>
+        <h3>SUBSCRIBE TO HAVE MORE NEWS</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste quia minima, repellat asperiores minus
             doloremque iusto rem, similique accusamus labore facere numquam tempore voluptas libero omnis, expedita
             sapiente tempora.</p>
         <form action="" id="formI">
-            <input type="email" placeholder="ingresa tu email">
-            <input type="submit" value="suscribete">
+            <input type="email" placeholder="enter your email">
+            <input type="submit" id="suscribe" value="suscribe">
         </form>
         <label>
             <input type="checkbox" id="activador">
-            Terminos y condiciones
+            Terms and Conditions
         </label>
     </div>
     <section class="opiniones" id="opiniones">
-        <h1 class="heading">Opiniones de clientes</h1>
+        <h1 class="heading">Customer Reviews</h1>
         <div class="caja-contenedor">
             <div class="caja">
                 <i class="fa-solid fa-atom"></i>
@@ -167,40 +171,40 @@
         </div>
     </section>
     <section class="precios" id="precios">
-        <h1 class="heading">Planes de precios</h1>
+        <h1 class="heading">Pricing Plans</h1>
         <div class="caja-contenedor">
             <div class="caja">
-                <h3 class="titulo">Tradicionales</h3>
-                <div class="tipos">$70 <span>/con factura</span></div>
+                <h3 class="titulo">Traditional</h3>
+                <div class="tipos">$50 <span>/with invoice</span></div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Manos libres</li>
-                    <li><i class="fa-solid fa-check"></i> Resistentes al agua</li>
+                    <li><i class="fa-solid fa-check"></i> Free Hands</li>
+                    <li><i class="fa-solid fa-check"></i> Water Resistant</li>
                     <li><i class="fas fa-times"></i> Extra bass</li>
-                    <li><i class="fas fa-times"></i> Cancelación de ruido</li>
+                    <li><i class="fas fa-times"></i> Noise Cancellation</li>
                 </ul>
-                <a href="#" class="btn">Compra ya!!</a>
+                <a href="#" class="btn">Buy Now!!</a>
             </div>
             <div class="caja">
-                <h3 class="titulo">Diadema</h3>
-                <div class="tipos">$70 <span>/con factura</span></div>
+                <h3 class="titulo">Diadem</h3>
+                <div class="tipos">$70 <span>/with invoice</span></div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Manos libres</li>
-                    <li><i class="fa-solid fa-check"></i> Resistentes al agua</li>
+                    <li><i class="fa-solid fa-check"></i> Free Hands</li>
+                    <li><i class="fa-solid fa-check"></i> Water Resistant</li>
                     <li><i class="fa-solid fa-check"></i> Extra bass</li>
-                    <li><i class="fas fa-times"></i> Cancelación de ruido</li>
+                    <li><i class="fas fa-times"></i> Noise Cancellation</li>
                 </ul>
-                <a href="#" class="btn">Compra ya!!</a>
+                <a href="#" class="btn">Buy Now!!</a>
             </div>
             <div class="caja">
-                <h3 class="titulo">Inalambricos</h3>
-                <div class="tipos">$70 <span>/con factura</span></div>
+                <h3 class="titulo">wireless</h3>
+                <div class="tipos">$90 <span>/with invoice</span></div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Manos libres</li>
-                    <li><i class="fa-solid fa-check"></i> Resistentes al agua</li>
+                    <li><i class="fa-solid fa-check"></i> Free Hands</li>
+                    <li><i class="fa-solid fa-check"></i> Water Resistant</li>
                     <li><i class="fa-solid fa-check"></i> Extra bass</li>
-                    <li><i class="fa-solid fa-check"></i> Cancelación de ruido</li>
+                    <li><i class="fa-solid fa-check"></i> Noise Cancellation</li>
                 </ul>
-                <a href="#" class="btn">Compra ya!!</a>
+                <a href="#" class="btn">Buy Now!!</a>
             </div>
         </div>
     </section>
@@ -209,50 +213,50 @@
             <img src="/img/form_img.png" alt="">
         </div>
         <form action="">
-            <h1 class="heading">Contactos</h1>
+            <h1 class="heading">Contacts</h1>
             <div class="inputcaja">
                 <input type="text" required>
-                <label for="">Nombre</label>
+                <label for="">Name</label>
             </div>
             <div class="inputcaja">
                 <input type="email" required>
                 <label for="">Email</label>
             </div>
             <div class="inputcaja">
-                <input type="number" required>
-                <label for="">Teléfono</label>
+                <input type="tel" required>
+                <label for="">Phone</label>
             </div>
             <div class="inputcaja">
                 <textarea required name="" id="" cols="30" rows="10"></textarea>
-                <label for="">Mensaje</label>
+                <label for="">Message</label>
             </div>
-            <input type="submit" class="btn" value="Enviar">
+            <input type="submit" class="btn" value="Send">
         </form>
     </section>
     <div class="footer">
         <div class="caja-contenedor">
             <div class="caja">
-                <h3>Noticias e información</h3>
+                <h3>news and information</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, consectetur. Vero quia consectetur
                     ducimus dolore cum expedita beatae mollitia sint quos placeat, iste enim illum maiores sapiente
                     excepturi? Optio, odit!</p>
             </div>
             <div class="caja">
-                <h3>Buscanos en</h3>
+                <h3>Search us in</h3>
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
                 <a href="#">Pinterest</a>
                 <a href="#">Twiter</a>
             </div>
             <div class="caja">
-                <h3>Más información</h3>
+                <h3>More information</h3>
                 <div class="info">
                     <i class="fas fa-phone"></i>
                     <p>123-456-789 <br>987-654-321</p>
                 </div>
                 <div class="info">
                     <i class="fas fa-envelope"></i>
-                    <p>correo@gmail.com <br>correodos@gmail.com</p>
+                    <p>falseMail@gmail.com <br>mailTwo@gmail.com</p>
                 </div>
                 <div class="info">
                     <i class="fa-solid fa-location-dot"></i>
@@ -261,10 +265,10 @@
             </div>
         </div>
         <h1 class="creditos">
-            &copy copyright @ 2022 Alexander Henao
+            &copy copyright @ 2022 Audio Yack
         </h1>
     </div>
-    <script src="/app.js"></script>
+    <script src="/index.js"></script>
 </body>
 
 </html>

@@ -71,9 +71,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 62px;
     background-color: #ffffff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    padding: 2rem 9%;
+    padding: 2rem 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +88,10 @@ header .logo {
 
 header .logo span {
     color: var(--limon);
+}
+
+header .toggle-menu {
+    display: none;
 }
 
 header .navbar a {
@@ -568,40 +573,70 @@ header label {
 }
 
 @media(max-width:782px) {
-    header label {
-        visibility: visible;
-        opacity: 1;
+    header {
+        height: 62px;
     }
 
-    header .navbar {
-        position: absolute;
-        top: 100%;
+    header .content_menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    header .content_menu .navbar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .toggle-menu {
+        display: block;
+        width: 28px;
+        cursor: pointer;
+    }
+
+    .toggle-menu img {
+        max-width: 100%;
+    }
+
+    header .content_menu {
+        display: flex;
+        align-items: flex-start;
+        position: fixed;
+        top: 61px;
         left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        padding: 1rem 2rem;
+        width: 100vw;
+        height: calc(100vh - 62px);
+        background-color: #cccccc40;
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform: translateY(-100vh);
         transform-origin: top;
-        transform: scaleY(0);
-        opacity: 0;
-        transition: .2s linear;
+        transition: transform .3s;
     }
+
+    header .content_menu .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        width: 100vw;
+    }
+
+    header .show_menu {
+        transform: translateY(0);
+    }
+
 
     header .navbar a {
-        display: block;
         margin: 2rem 0;
-        font-size: 2rem;
     }
 
-    header input:checked~.navbar {
-        transform: scaleY(1);
-        opacity: 1;
-    }
 
-    header input:checked~label::before {
-        content: '\f00d';
-    }
+    /*
+    content: '\f00d';
+    */
 
     .inicio {
         flex-flow: column-reverse;
@@ -641,4 +676,8 @@ header label {
     .acerca_de .columna .content .bottons a:last-child {
         margin: 1rem 0;
     }
+}
+
+.contenido {
+    background-image: radial-gradient(circle at 50% -20.71%, #00ffff 0, #21e0ff 25%, #3cb5f2 50%, #408cbb 75%, #3b6788 100%);
 }
