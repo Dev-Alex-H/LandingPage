@@ -164,6 +164,55 @@ header label {
     flex-wrap: wrap;
 }
 
+.container-slider {
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 600%;
+    margin-left: -100%;
+}
+
+.slider__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #25d1b2b0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn:hover {
+    background-color: #25d1b2;
+    width: 43px;
+    height: 43px;
+    font-size: 33px;
+}
+
+.slider__btn--right {
+    right: 10px;
+}
+
+.slider__btn--left {
+    left: 10px;
+}
+
 .detalles .caja-contenedor .caja {
     flex: 1 1 30rem;
     background: #ffffff;
@@ -297,6 +346,14 @@ header label {
     font-size: 1.8rem;
 }
 
+.opiniones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 50px auto;
+}
+
 .opiniones .caja-contenedor {
     display: flex;
     align-items: center;
@@ -304,7 +361,9 @@ header label {
     flex-wrap: wrap;
 }
 
-.opiniones .caja-contenedor .caja {
+.opiniones .caja-contenedor .caja__slider {
+    display: flex;
+    justify-content: center;
     background: #ffffff;
     margin: 1rem;
     padding: 1rem;
@@ -314,18 +373,24 @@ header label {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     flex: 1 1 30rem;
     border-radius: .5rem;
+    height: 60vh;
 }
 
-.opiniones .caja-contenedor .caja .fa-atom {
+.opiniones .caja-contenedor .caja__slider .user {
+    position: relative;
+    width: 70%;
+}
+
+.opiniones .caja-contenedor .caja__slider .fa-atom {
     position: absolute;
     top: 1rem;
-    right: 2rem;
+    right: .5rem;
     font-size: 8rem;
     color: var(--limon);
     opacity: .3;
 }
 
-.opiniones .caja-contenedor .caja .user img {
+.opiniones .caja-contenedor .caja__slider .user img {
     border-radius: 50%;
     object-fit: cover;
     height: 8rem;
@@ -333,18 +398,18 @@ header label {
     margin-top: 2rem;
 }
 
-.opiniones .caja-contenedor .caja .user h3 {
+.opiniones .caja-contenedor .caja__slider .user h3 {
     color: var(--verde);
     font-size: 2rem;
 }
 
-.opiniones .caja-contenedor .caja .user .stars i {
+.opiniones .caja-contenedor .caja__slider .user .stars i {
     color: var(--verde);
     font-size: 1.5rem;
     padding: 1rem 0;
 }
 
-.opiniones .caja-contenedor .caja .comentarios {
+.opiniones .caja-contenedor .caja__slider .comentarios {
     color: #666666;
     font-size: 1.5rem;
     padding: 1rem;
@@ -558,15 +623,32 @@ header label {
     text-align: center;
 }
 
-@media(max-width:1200px) {
+@media(min-width: 2500px) {
     html {
-        font-size: 55%;
+        font-size: 100%;
     }
-}
 
-@media(max-width:990px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cont__body {
+        width: 1800px;
+    }
+
     section {
-        padding: 0 3%;
+        min-height: 50vh;
+        padding: 0 9%;
         padding-top: 7.5rem;
         padding-bottom: 2rem;
     }
@@ -633,11 +715,6 @@ header label {
         margin: 2rem 0;
     }
 
-
-    /*
-    content: '\f00d';
-    */
-
     .inicio {
         flex-flow: column-reverse;
     }
@@ -661,6 +738,11 @@ header label {
     .suscribete p {
         width: auto;
     }
+
+    .opiniones .caja-contenedor .caja__slider .fa-atom {
+        top: 2rem;
+        font-size: 5rem;
+    }
 }
 
 @media(max-width:400px) {
@@ -676,8 +758,4 @@ header label {
     .acerca_de .columna .content .bottons a:last-child {
         margin: 1rem 0;
     }
-}
-
-.contenido {
-    background-image: radial-gradient(circle at 50% -20.71%, #00ffff 0, #21e0ff 25%, #3cb5f2 50%, #408cbb 75%, #3b6788 100%);
 }
