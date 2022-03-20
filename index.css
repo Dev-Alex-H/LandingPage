@@ -350,7 +350,6 @@ header label {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     margin: 50px auto;
 }
 
@@ -643,7 +642,8 @@ header label {
     }
 
     .cont__body {
-        width: 1800px;
+        width: 2000px;
+        box-shadow: 0px 0px 5px 0px #000000;
     }
 
     section {
