@@ -739,6 +739,15 @@ header label {
         width: auto;
     }
 
+    .opiniones {
+        min-height: 1vh;
+    }
+
+    .opiniones .caja-contenedor .container-slider .slider .slider__section .caja__slider {
+        height: 50vh;
+        overflow: hidden;
+    }
+
     .opiniones .caja-contenedor .caja__slider .fa-atom {
         top: 2rem;
         font-size: 5rem;

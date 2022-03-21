@@ -61,4 +61,4 @@ function Prev() {
 btnRight.addEventListener('click', function () { Next(); });
 btnLeft.addEventListener('click', function () { Prev(); });
 
-setInterval(function () { Next(); }, 7000);
+// setInterval(function () { Next(); }, 7000);
